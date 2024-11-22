@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thanak81-uideveloper-deployment
+  labels:
+    app: thanak81-uideveloper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thanak81-uideveloper
+  template:
+    metadata:
+      labels:
+        app: thanak81-uideveloper
+    spec:
+      containers:
+        - name: thanak81-uideveloper-container
+          image: pipejet/thanak81-uideveloper:0
+          ports:
+            - containerPort: 3000

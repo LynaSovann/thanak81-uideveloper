@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: thanak81-uideveloper-certificate
+  namespace: thanak81-uideveloper
+spec:
+  secretName: thanak81-uideveloper-secret-tls
+  commonName: thanak81-uideveloper.assessify.org
+  dnsNames:
+  - thanak81-uideveloper.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer

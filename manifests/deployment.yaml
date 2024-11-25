@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: thanak81-uideveloper-container
-          image: pipejet/thanak81-uideveloper:7
+          image: pipejet/thanak81-uideveloper:8
           ports:
             - containerPort: 3000
